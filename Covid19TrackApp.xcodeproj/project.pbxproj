@@ -16,6 +16,10 @@
 		685666092485747D0096ECCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685666072485747D0096ECCD /* LaunchScreen.storyboard */; };
 		685666142485747D0096ECCD /* Covid19TrackAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685666132485747D0096ECCD /* Covid19TrackAppTests.swift */; };
 		6856661F2485747D0096ECCD /* Covid19TrackAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856661E2485747D0096ECCD /* Covid19TrackAppUITests.swift */; };
+		6856662D248574AC0096ECCD /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856662C248574AC0096ECCD /* WebService.swift */; };
+		6856662F248575720096ECCD /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856662E248575720096ECCD /* Tracking.swift */; };
+		68566631248587210096ECCD /* TrackingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68566630248587210096ECCD /* TrackingListViewModel.swift */; };
+		68566633248587D50096ECCD /* TrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68566632248587D50096ECCD /* TrackingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		6856661A2485747D0096ECCD /* Covid19TrackAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Covid19TrackAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6856661E2485747D0096ECCD /* Covid19TrackAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19TrackAppUITests.swift; sourceTree = "<group>"; };
 		685666202485747D0096ECCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6856662C248574AC0096ECCD /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		6856662E248575720096ECCD /* Tracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
+		68566630248587210096ECCD /* TrackingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingListViewModel.swift; sourceTree = "<group>"; };
+		68566632248587D50096ECCD /* TrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +109,10 @@
 		685665F8248574780096ECCD /* Covid19TrackApp */ = {
 			isa = PBXGroup;
 			children = (
-				685665F9248574780096ECCD /* AppDelegate.swift */,
-				685665FB248574780096ECCD /* SceneDelegate.swift */,
-				68566600248574780096ECCD /* ContentView.swift */,
+				685666352485958D0096ECCD /* Model */,
+				68566637248595C00096ECCD /* View */,
+				685666342485954D0096ECCD /* View Model */,
+				68566636248595A00096ECCD /* Services */,
 				685666022485747D0096ECCD /* Assets.xcassets */,
 				685666072485747D0096ECCD /* LaunchScreen.storyboard */,
 				6856660A2485747D0096ECCD /* Info.plist */,
@@ -137,6 +146,41 @@
 				685666202485747D0096ECCD /* Info.plist */,
 			);
 			path = Covid19TrackAppUITests;
+			sourceTree = "<group>";
+		};
+		685666342485954D0096ECCD /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				68566632248587D50096ECCD /* TrackingViewModel.swift */,
+				68566630248587210096ECCD /* TrackingListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		685666352485958D0096ECCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6856662E248575720096ECCD /* Tracking.swift */,
+				685665FB248574780096ECCD /* SceneDelegate.swift */,
+				685665F9248574780096ECCD /* AppDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		68566636248595A00096ECCD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6856662C248574AC0096ECCD /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		68566637248595C00096ECCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68566600248574780096ECCD /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68566631248587210096ECCD /* TrackingListViewModel.swift in Sources */,
+				68566633248587D50096ECCD /* TrackingViewModel.swift in Sources */,
+				6856662F248575720096ECCD /* Tracking.swift in Sources */,
 				685665FA248574780096ECCD /* AppDelegate.swift in Sources */,
 				685665FF248574780096ECCD /* Covid19TrackApp.xcdatamodeld in Sources */,
 				68566601248574780096ECCD /* ContentView.swift in Sources */,
+				6856662D248574AC0096ECCD /* WebService.swift in Sources */,
 				685665FC248574780096ECCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Covid19TrackApp/Preview Content\"";
-				DEVELOPMENT_TEAM = H8S78S5228;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Covid19TrackApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,7 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Covid19TrackApp/Preview Content\"";
-				DEVELOPMENT_TEAM = H8S78S5228;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Covid19TrackApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
