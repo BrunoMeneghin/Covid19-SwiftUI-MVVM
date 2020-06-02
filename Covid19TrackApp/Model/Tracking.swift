@@ -11,8 +11,9 @@ import Foundation
 struct Tracking: Decodable {
     
     let state: String
-    let total: Int
+    let totalTestResults: Int
     let positive: Int
     let death: Int
     let hospitalized: Int?
+    let recovered: Int?
 }

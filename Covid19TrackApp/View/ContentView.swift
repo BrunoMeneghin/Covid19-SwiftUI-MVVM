@@ -20,20 +20,20 @@ struct ContentView: View {
         NavigationView {
             
             List(self.trackingListVM.trackings, id: \.id) { tracking in
-                
                 HStack {
-                    
                     Text(tracking.state)
-                        
-                        .padding(18)
+                        .padding()
                         .foregroundColor(Color.white)
                         .background(Color.blue)
-                        .clipShape(Circle())
+                        .cornerRadius(4)
                         .font(.custom("", size: 22))
                     
-                    VStack(alignment: .leading) {
-                        
-                        Text("Cases \(tracking.total)")
+                     }
+                    
+                    Spacer()
+                
+                    VStack() {
+                        Text("Cases \(tracking.totalTestResults)")
                             .font(.system(size: 18, weight: .heavy, design: .default))
                             .foregroundColor(Color.black)
                         
@@ -45,7 +45,10 @@ struct ContentView: View {
                         
                         Text("Hospital \(tracking.hospitalized)")
                             .foregroundColor(Color.gray)
-                    }
+                        
+                        Text("Recoved \(tracking.recovered)")
+                                                  .foregroundColor(Color.gray)
+                        
                 }
             }
                 

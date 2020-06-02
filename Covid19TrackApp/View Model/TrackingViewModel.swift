@@ -22,8 +22,8 @@ class TrackingViewModel {
         return self.tracking.state
     }
     
-    var total: Int {
-        return self.tracking.total
+    var totalTestResults: Int {
+        return self.tracking.totalTestResults
     }
     
     var positive: Int {
@@ -36,6 +36,10 @@ class TrackingViewModel {
     
     var hospitalized: Int {
         return self.tracking.hospitalized ?? 0
+    }
+    
+    var recovered: Int {
+        return self.tracking.recovered ?? 0
     }
 
 }
